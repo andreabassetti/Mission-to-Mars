@@ -138,9 +138,9 @@ def hemispheres(browser):
         hemisphere['title'] = titles
         hemisphere_image_urls.append(hemisphere)
         
-        
         browser.back()
-
+        
+        hemisphere = hemisphere_image_urls
         return hemisphere_image_urls
 
 
