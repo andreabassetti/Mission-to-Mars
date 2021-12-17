@@ -205,13 +205,13 @@ for x in items:
     hemisphere['img_url'] = f'{main_url}{img_url}'
     hemisphere['title'] = titles
     hemisphere_image_urls.append(hemisphere)
-    
+    hemisphere = hemisphere_image_urls
     
     browser.back()
 
 # 4. Print the list that holds the dictionary of each image url and title.
 hemisphere_image_urls
-hemisphere = hemisphere_image_urls
+#hemisphere = hemisphere_image_urls
 # 5. Quit the browser
 browser.quit()
 

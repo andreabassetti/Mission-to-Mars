@@ -137,10 +137,12 @@ def hemispheres(browser):
         hemisphere['img_url'] = f'{main_url}{img_url}'
         hemisphere['title'] = titles
         hemisphere_image_urls.append(hemisphere)
-        
+        hemisphere = hemisphere_image_urls
+
         browser.back()
         
-        hemisphere = hemisphere_image_urls
+       
+
         return hemisphere_image_urls
 
 
