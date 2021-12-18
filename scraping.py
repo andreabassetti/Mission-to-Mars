@@ -110,10 +110,8 @@ def hemispheres(browser):
     # Parse the data
     hemi_html = browser.html
     hemi_soup = soup(hemi_html, 'html.parser')
-
     # Retrieve all items for hemispheres information
     items = hemi_soup.find_all('div', class_='item')
-
     # Create loop to scrape through all hemisphere information
     for x in items:
         hemisphere = {}
@@ -128,8 +126,6 @@ def hemispheres(browser):
         download = image_soup.find('div', class_= 'downloads')
         img_url = image_soup.select_one("div.downloads ul li a").get('href')
     
-
-        
         print(titles)
         print(img_url)
         
@@ -138,12 +134,11 @@ def hemispheres(browser):
         hemisphere['title'] = titles
         hemisphere_image_urls.append(hemisphere)
         hemisphere = hemisphere_image_urls
-
-        browser.back()
         
-       
+        
+        browser.back()
 
-        return hemisphere_image_urls
+    return hemisphere_image_urls
 
 
 if __name__ == "__main__":
